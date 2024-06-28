@@ -6,18 +6,19 @@ import {
   BsInstagram,
   BsTwitter,
 } from "react-icons/bs";
+import logo from '../images/logo2.png'
 
 export function Foot() {
   return (
-    <Footer container className="bg-green-50">
+    <Footer container className="bg-green-50 font-Poppins">
       <div className="w-full">
         <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
           <div>
             <Footer.Brand
-              href="https://flowbite.com"
-              src="https://flowbite.com/docs/images/logo.svg"
+            className=" h-16"
+              // href="https://flowbite.com"
+              src={logo}
               alt="Flowbite Logo"
-              name="Flowbite"
             />
           </div>
           <div className="flex gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">

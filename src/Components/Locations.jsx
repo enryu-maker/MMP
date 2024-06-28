@@ -3,7 +3,7 @@ import { FaArrowCircleRight } from "react-icons/fa";
 
 function Locations() {
   return (
-    <div className="h-full w-full">
+    <div className="h-full w-full font-Poppins">
       <div>
         <div className="flex flex-col h-full w-full items-center">
           <p className="text-4xl font-semibold h-full w-full text-center py-10">

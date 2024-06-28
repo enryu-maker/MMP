@@ -1,5 +1,5 @@
 import { Avatar, Dropdown, Navbar } from "flowbite-react";
-
+import logo from '../images/logo2.png'
 export function Nav() {
   return (
     <Navbar
@@ -10,7 +10,7 @@ export function Nav() {
       <div className="flex flex-row justify-around items-center font-Poppins w-[88%] self-center">
         <Navbar.Brand href="https://flowbite-react.com">
           <span className="self-center whitespace-nowrap text-lg font-semibold dark:text-white">
-            Flowbite React
+            <img src={logo} className="h-10"/>
           </span>
         </Navbar.Brand>
         <Navbar.Collapse>
