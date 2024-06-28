@@ -8,7 +8,7 @@ export default function Achive() {
     <div className="flex flex-col bg-gray-50">
       <div className="w-screen flex flex-col justify-between items-center align-middle  px-5">
         <div className="">
-          <p className="text-4xl font-semibold">Featured Properties</p>
+          <p className="text-4xl font-semibold">Achievements</p>
         </div>
         <Carousel
           slide={true}
