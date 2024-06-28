@@ -4,6 +4,8 @@ import MultiCoro from "../Components/Multi-Carosal";
 import Achive from "../Components/Achivements";
 import Locations from "../Components/Locations";
 import About from "../Components/About";
+import Reviews from "../Components/Reviews";
+import Banner from "../Components/Banner";
 
 function Home() {
   return (
@@ -32,10 +34,24 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="h-fit w-full bg-blue-50 p-10  flex align-middle justify-center items-center">
+      <div className="h-fit w-full bg-green-50 p-10  flex align-middle justify-center items-center">
         <div className="h-full bg-gray-50 w-11/12">
           <div className="justify-center flex">
             <About />
+          </div>
+        </div>
+      </div>
+      <div className="h-fit w-full bg-green-50 p-10  flex align-middle justify-center items-center">
+        <div className="h-full bg-gray-50 w-11/12">
+          <div className="justify-center flex">
+            <Reviews />
+          </div>
+        </div>
+      </div>
+      <div className="h-full w-full bg-green-50 pt-10 flex align-middle justify-center items-center">
+        <div className="h-full bg-gray-50 w-full">
+          <div className="justify-center flex">
+            <Banner />
           </div>
         </div>
       </div>

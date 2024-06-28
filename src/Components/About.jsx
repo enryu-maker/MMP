@@ -2,7 +2,7 @@ import React from "react";
 import about from "../images/about.png";
 function About() {
   return (
-    <div className="h-full w-full bg-blue-50">
+    <div className="h-full w-full bg-green-50">
       <div className="flex flex-row gap-10">
         <div className="flex flex-col gap-5 ">
           <div>

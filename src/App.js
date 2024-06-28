@@ -1,17 +1,49 @@
-import logo from "./logo.svg";
-import "./App.css";
-import { Route, Routes, route } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Route, Routes } from "react-router-dom";
 import Home from "./Screens/Home";
 import { Nav } from "./Components/Nav";
 import Property from "./Screens/Property";
+import PropertyInfo from "./Screens/PropertyInfo";
+import About from "./Screens/About";
+import Contact from "./Screens/Contact";
+import { ping } from "ldrs";
+import { Foot } from "./Components/Footer";
+
+// Register the loader
+ping.register();
+
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Set a timer to hide the loading screen after 3 seconds
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    // Cleanup the timer if the component is unmounted
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center min-h-screen bg-gray-100">
+        <l-ping size="100" speed="1" color="green"></l-ping>
+      </div>
+    );
+  }
+
   return (
-    <div>
+    <div className="font-Poppins">
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact-us" element={<Contact />} />
         <Route path="/properties-list/:slug" element={<Property />} />
+        <Route path="/property/:slug" element={<PropertyInfo />} />
       </Routes>
+      <Foot />
     </div>
   );
 }
