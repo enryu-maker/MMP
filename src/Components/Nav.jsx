@@ -18,10 +18,10 @@ export function Nav() {
             href="#"
             className="text-lg text-black hover:text-green-500"
           >
-            Home
+            <p className="text-lg hover:text-green-500 text-black">Home</p>
           </Navbar.Link>
           <Navbar.Link href="#/about" className="text-lg text-black">
-            About Us
+            <p className="text-lg hover:text-green-500 text-black">About Us</p>
           </Navbar.Link>
 
           <Dropdown
@@ -64,13 +64,17 @@ export function Nav() {
           <Dropdown
             arrowIcon={true}
             inline
-            label={<p className="text-lg">Na Plots</p>}
+            label={
+              <p className="text-lg hover:text-green-500 text-black">
+                Na Plots
+              </p>
+            }
             className="w-fit"
           >
             <Dropdown.Item>All Projects</Dropdown.Item>
           </Dropdown>
           <Navbar.Link href="#/contact-us" className="text-lg text-black">
-            Contact
+            <p className="text-lg hover:text-green-500 text-black">Contact</p>
           </Navbar.Link>
         </Navbar.Collapse>
       </div>
