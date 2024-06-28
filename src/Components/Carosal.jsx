@@ -6,7 +6,7 @@ import pic3 from "../images/image-16.webp";
 export default function Coro() {
   return (
     <div
-      className="h-screen w-full !rounded-none"
+      className="h-64 md:h-screen w-full !rounded-none"
       style={{ borderRadius: "0" }}
     >
       <Carousel
@@ -15,9 +15,9 @@ export default function Coro() {
         indicators={false}
         loop={true}
       >
-        <img src={pic1} alt="..." />
-        <img src={pic2} alt="..." />
-        <img src={pic3} alt="..." />
+        <img src={pic1} alt="Image 1" />
+        <img src={pic2} alt="Image 2" />
+        <img src={pic3} alt="Image 3" />
       </Carousel>
     </div>
   );

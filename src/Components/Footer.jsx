@@ -10,9 +10,9 @@ import {
 export function Foot() {
   return (
     <Footer container className="bg-green-50">
-      <div className="w-full">
-        <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
-          <div>
+      <div className="w-full p-0 md:py-10">
+        <div className="grid gap-10 sm:flex sm:justify-between md:grid-cols-3">
+          <div className="flex justify-center sm:justify-start">
             <Footer.Brand
               href="https://flowbite.com"
               src="https://flowbite.com/docs/images/logo.svg"
@@ -20,7 +20,7 @@ export function Foot() {
               name="Flowbite"
             />
           </div>
-          <div className="flex gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
+          <div className="grid gap-8 sm:grid-cols-3 md:gap-0 justify-end">
             <div>
               <Footer.Title title="Quick Links" />
               <Footer.LinkGroup col>
@@ -49,7 +49,7 @@ export function Foot() {
                 </Footer.Link>
               </Footer.LinkGroup>
             </div>
-            <div className="max-w-80">
+            <div className="max-w-xs">
               <Footer.Title title="Contact" />
               <Footer.LinkGroup col>
                 <Footer.Link href="#" className="hover:text-green-500">
@@ -67,9 +67,9 @@ export function Foot() {
           </div>
         </div>
         <Footer.Divider />
-        <div className="w-full sm:flex sm:items-center sm:justify-between">
+        <div className="w-full flex flex-col sm:flex-row sm:items-center sm:justify-between mt-4">
           <Footer.Copyright href="#" by="NerdTech" year={2021} />
-          <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
+          <div className="mt-4 flex justify-center space-x-6 sm:mt-0">
             <Footer.Icon
               href="#"
               className="text-black hover:text-green-500 transition ease-in-out"

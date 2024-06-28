@@ -6,7 +6,7 @@ import pic3 from "../images/image-16.webp";
 export default function Achive() {
   return (
     <div className="flex flex-col bg-gray-50">
-      <div className="w-screen flex flex-col justify-between items-center align-middle  px-5">
+      <div className="w-screen flex flex-col justify-between items-center align-middle px-5">
         <div className="">
           <p className="text-4xl font-semibold">Achievements</p>
         </div>
@@ -15,128 +15,125 @@ export default function Achive() {
           loop={true}
           indicators={false}
           hover
-          className="w-full h-[500px] px-20"
+          className="w-full h-[500px] px-4 md:px-20"
         >
-          <div className="p-4 flex gap-10">
-            <div className="bg-white shadow-md rounded-lg w-[300px] h-72 overflow-hidden">
-              <img src={pic1} alt="Roongta Grandezza" className="w-full" />
+          <div className="p-4 flex justify-center md:justify-between gap-10">
+            <div className="bg-white shadow-md rounded-lg w-full md:w-[300px] h-fit overflow-hidden">
+              <img
+                src={pic1}
+                alt="Roongta Grandezza"
+                className="w-full h-full object-cover"
+              />
               <div className="p-4 text-center">
                 <h3 className="text-lg font-normal">Roongta Grandezza</h3>
-
                 <p className="mt-2 text-sm font-light text-gray-600">
                   Govind Nagar, Off 100ft Ring Road
                 </p>
               </div>
             </div>
-            <div className="bg-white shadow-md rounded-lg w-[300px] h-72 overflow-hidden">
-              <img src={pic1} alt="Roongta Grandezza" className="w-full" />
+            <div className="hidden md:block bg-white shadow-md rounded-lg w-[300px] h-fit overflow-hidden">
+              <img
+                src={pic2}
+                alt="Roongta Grandezza"
+                className="w-full h-full object-cover"
+              />
               <div className="p-4 text-center">
                 <h3 className="text-lg font-normal">Roongta Grandezza</h3>
-
                 <p className="mt-2 text-sm font-light text-gray-600">
                   Govind Nagar, Off 100ft Ring Road
                 </p>
               </div>
             </div>
-            <div className="bg-white shadow-md rounded-lg w-[300px] h-72 overflow-hidden">
-              <img src={pic1} alt="Roongta Grandezza" className="w-full" />
+            <div className="hidden md:block bg-white shadow-md rounded-lg w-[300px] h-fit overflow-hidden">
+              <img
+                src={pic3}
+                alt="Roongta Grandezza"
+                className="w-full h-full object-cover"
+              />
               <div className="p-4 text-center">
                 <h3 className="text-lg font-normal">Roongta Grandezza</h3>
-
-                <p className="mt-2 text-sm font-light text-gray-600">
-                  Govind Nagar, Off 100ft Ring Road
-                </p>
-              </div>
-            </div>
-            <div className="bg-white shadow-md rounded-lg w-[300px] h-72 overflow-hidden">
-              <img src={pic1} alt="Roongta Grandezza" className="w-full" />
-              <div className="p-4 text-center">
-                <h3 className="text-lg font-normal">Roongta Grandezza</h3>
-
-                <p className="mt-2 text-sm font-light text-gray-600">
-                  Govind Nagar, Off 100ft Ring Road
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="p-4 flex gap-10">
-            <div className="bg-white shadow-md rounded-lg w-[300px] h-72 overflow-hidden">
-              <img src={pic1} alt="Roongta Grandezza" className="w-full" />
-              <div className="p-4 text-center">
-                <h3 className="text-lg font-normal">Roongta Grandezza</h3>
-
-                <p className="mt-2 text-sm font-light text-gray-600">
-                  Govind Nagar, Off 100ft Ring Road
-                </p>
-              </div>
-            </div>
-            <div className="bg-white shadow-md rounded-lg w-[300px] h-72 overflow-hidden">
-              <img src={pic1} alt="Roongta Grandezza" className="w-full" />
-              <div className="p-4 text-center">
-                <h3 className="text-lg font-normal">Roongta Grandezza</h3>
-
-                <p className="mt-2 text-sm font-light text-gray-600">
-                  Govind Nagar, Off 100ft Ring Road
-                </p>
-              </div>
-            </div>
-            <div className="bg-white shadow-md rounded-lg w-[300px] h-72 overflow-hidden">
-              <img src={pic1} alt="Roongta Grandezza" className="w-full" />
-              <div className="p-4 text-center">
-                <h3 className="text-lg font-normal">Roongta Grandezza</h3>
-
-                <p className="mt-2 text-sm font-light text-gray-600">
-                  Govind Nagar, Off 100ft Ring Road
-                </p>
-              </div>
-            </div>
-            <div className="bg-white shadow-md rounded-lg w-[300px] h-72 overflow-hidden">
-              <img src={pic1} alt="Roongta Grandezza" className="w-full" />
-              <div className="p-4 text-center">
-                <h3 className="text-lg font-normal">Roongta Grandezza</h3>
-
                 <p className="mt-2 text-sm font-light text-gray-600">
                   Govind Nagar, Off 100ft Ring Road
                 </p>
               </div>
             </div>
           </div>
-          <div className="p-4 flex gap-10">
-            <div className="bg-white shadow-md rounded-lg w-[300px] h-72 overflow-hidden">
-              <img src={pic1} alt="Roongta Grandezza" className="w-full" />
+          <div className="p-4 flex justify-center md:justify-between gap-10">
+            <div className="bg-white shadow-md rounded-lg w-full md:w-[300px] h-fit overflow-hidden">
+              <img
+                src={pic2}
+                alt="Roongta Grandezza"
+                className="w-full h-full object-cover"
+              />
               <div className="p-4 text-center">
                 <h3 className="text-lg font-normal">Roongta Grandezza</h3>
-
                 <p className="mt-2 text-sm font-light text-gray-600">
                   Govind Nagar, Off 100ft Ring Road
                 </p>
               </div>
             </div>
-            <div className="bg-white shadow-md rounded-lg w-[300px] h-72 overflow-hidden">
-              <img src={pic1} alt="Roongta Grandezza" className="w-full" />
+            <div className="hidden md:block bg-white shadow-md rounded-lg w-[300px] h-fit overflow-hidden">
+              <img
+                src={pic3}
+                alt="Roongta Grandezza"
+                className="w-full h-full object-cover"
+              />
               <div className="p-4 text-center">
                 <h3 className="text-lg font-normal">Roongta Grandezza</h3>
-
                 <p className="mt-2 text-sm font-light text-gray-600">
                   Govind Nagar, Off 100ft Ring Road
                 </p>
               </div>
             </div>
-            <div className="bg-white shadow-md rounded-lg w-[300px] h-72 overflow-hidden">
-              <img src={pic1} alt="Roongta Grandezza" className="w-full" />
+            <div className="hidden md:block bg-white shadow-md rounded-lg w-[300px] h-fit overflow-hidden">
+              <img
+                src={pic1}
+                alt="Roongta Grandezza"
+                className="w-full h-full object-cover"
+              />
               <div className="p-4 text-center">
                 <h3 className="text-lg font-normal">Roongta Grandezza</h3>
-
                 <p className="mt-2 text-sm font-light text-gray-600">
                   Govind Nagar, Off 100ft Ring Road
                 </p>
               </div>
             </div>
-            <div className="bg-white shadow-md rounded-lg w-[300px] h-72 overflow-hidden">
-              <img src={pic1} alt="Roongta Grandezza" className="w-full" />
+          </div>
+          <div className="p-4 flex justify-center md:justify-between gap-10">
+            <div className="bg-white shadow-md rounded-lg w-full md:w-[300px] h-fit overflow-hidden">
+              <img
+                src={pic3}
+                alt="Roongta Grandezza"
+                className="w-full h-full object-cover"
+              />
               <div className="p-4 text-center">
                 <h3 className="text-lg font-normal">Roongta Grandezza</h3>
-
+                <p className="mt-2 text-sm font-light text-gray-600">
+                  Govind Nagar, Off 100ft Ring Road
+                </p>
+              </div>
+            </div>
+            <div className="hidden md:block bg-white shadow-md rounded-lg w-[300px] h-fit overflow-hidden">
+              <img
+                src={pic1}
+                alt="Roongta Grandezza"
+                className="w-full h-full object-cover"
+              />
+              <div className="p-4 text-center">
+                <h3 className="text-lg font-normal">Roongta Grandezza</h3>
+                <p className="mt-2 text-sm font-light text-gray-600">
+                  Govind Nagar, Off 100ft Ring Road
+                </p>
+              </div>
+            </div>
+            <div className="hidden md:block bg-white shadow-md rounded-lg w-[300px] h-fit overflow-hidden">
+              <img
+                src={pic2}
+                alt="Roongta Grandezza"
+                className="w-full h-full object-cover"
+              />
+              <div className="p-4 text-center">
+                <h3 className="text-lg font-normal">Roongta Grandezza</h3>
                 <p className="mt-2 text-sm font-light text-gray-600">
                   Govind Nagar, Off 100ft Ring Road
                 </p>

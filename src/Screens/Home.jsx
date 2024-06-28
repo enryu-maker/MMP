@@ -10,45 +10,45 @@ import Banner from "../Components/Banner";
 function Home() {
   return (
     <div>
-      <div className="h-screen w-screen">
+      <div className="md:h-screen h-fit w-screen">
         <Caro />
       </div>
-      <div className="h-fit w-full p-10 bg-gray-50 flex align-middle justify-center items-center">
+      <div className="h-fit w-full p-4 md:p-10 bg-gray-50 flex align-middle justify-center items-center">
         <div>
-          <div className="justify-center flex bg-gray-50  ">
+          <div className="justify-center flex bg-gray-50">
             <MultiCoro />
           </div>
         </div>
       </div>
       <div className="h-fit w-full bg-gray-50 flex align-middle justify-center items-center">
         <div>
-          <div className="justify-center flex bg-gray-50  ">
+          <div className="justify-center flex bg-gray-50">
             <Achive />
           </div>
         </div>
       </div>
-      <div className="h-fit w-full pb-20 bg-gray-50 flex align-middle justify-center items-center">
+      <div className="h-fit w-full pb-10 md:pb-20 bg-gray-50 flex align-middle justify-center items-center">
         <div className="h-full bg-gray-50 w-11/12">
           <div className="justify-center flex">
             <Locations />
           </div>
         </div>
       </div>
-      <div className="h-fit w-full bg-green-50 p-10  flex align-middle justify-center items-center">
+      <div className="h-fit w-full bg-green-50 p-4 md:p-10 flex align-middle justify-center items-center">
         <div className="h-full bg-gray-50 w-11/12">
           <div className="justify-center flex">
             <About />
           </div>
         </div>
       </div>
-      <div className="h-fit w-full bg-green-50 p-10  flex align-middle justify-center items-center">
+      <div className="h-fit w-full bg-green-50 p-4 md:p-10 flex align-middle justify-center items-center">
         <div className="h-full bg-gray-50 w-11/12">
           <div className="justify-center flex">
             <Reviews />
           </div>
         </div>
       </div>
-      <div className="h-full w-full bg-green-50 pt-10 flex align-middle justify-center items-center">
+      <div className="h-full w-full bg-green-50 pt-4 md:pt-10 flex align-middle justify-center items-center">
         <div className="h-full bg-gray-50 w-full">
           <div className="justify-center flex">
             <Banner />
