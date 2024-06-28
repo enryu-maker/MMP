@@ -6,7 +6,7 @@ import pic3 from "../images/image-16.webp";
 export default function PropertyInfo() {
     return (
         <div className='h-full w-full flex flex-col justify-center font-Poppins items-center bg-slate-50'>
-            <div className='h-[50vh] w-[92%] !rounded-none my-10'>
+            <div className='sm:h-[50vh] h-[20vh] w-[92%] !rounded-none my-10'>
                 <Carousel
                     className="!rounded-none"
                     style={{ borderRadius: "0" }}
@@ -27,8 +27,8 @@ export default function PropertyInfo() {
                     </div>
                 </Carousel>
             </div>
-            <div className='w-[88%] flex justify-evenly mb-10 items-start'>
-                <div className='w-[60%] space-y-8'>
+            <div className='w-[88%] flex sm:flex-row flex-col justify-evenly mb-10 items-start'>
+                <div className='sm:w-[60%] space-y-8'>
                     <div className='w-full bg-white h-[180px] rounded-md'>
                         <div className="flex flex-col justify-evenly items-start h-full px-5">
                             <h3 className="text-3xl font-black">Roongta Grandezza</h3>
@@ -77,7 +77,7 @@ export default function PropertyInfo() {
                         </div>
                     </div>
                 </div>
-                <div className='w-[35%]'>
+                <div className='sm:w-[35%] w-[100%] sm:mt-0 mt-10'>
                     <div className='w-full bg-white rounded-md '>
                         <div className="flex flex-col justify-between items-center h-[500px]">
                             <h3 className="text-2xl font-bold bg-green-500 text-white w-full rounded-t-md py-5 px-10" >Enquire Now</h3>
