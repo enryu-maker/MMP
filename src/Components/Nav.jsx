@@ -2,7 +2,11 @@ import { Avatar, Dropdown, Navbar } from "flowbite-react";
 
 export function Nav() {
   return (
-    <Navbar fluid rounded className="shadow-md p-5 text-black">
+    <Navbar
+      fluid
+      rounded
+      className="shadow-md p-5 text-black top-0 sticky z-50"
+    >
       <Navbar.Brand href="https://flowbite-react.com">
         <span className="self-center whitespace-nowrap text-lg font-semibold dark:text-white">
           Flowbite React

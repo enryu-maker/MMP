@@ -1,31 +1,24 @@
-import React, { Component } from "react";
-import caro1 from "../images/image-14.webp";
-import caro2 from "../images/image-15.webp";
-import caro3 from "../images/image-16.webp";
-import { Carousel } from "react-responsive-carousel";
+import { Carousel } from "flowbite-react";
+import pic1 from "../images/image-14.webp";
+import pic2 from "../images/image-15.webp";
+import pic3 from "../images/image-16.webp";
 
-export default function Caro() {
-  {
-    return (
+export default function Coro() {
+  return (
+    <div
+      className="h-screen w-full !rounded-none"
+      style={{ borderRadius: "0" }}
+    >
       <Carousel
-        infiniteLoop
-        autoPlay
-        swipeable={true}
-        showThumbs={false}
-        showIndicators={false}
-        showArrows={true}
-        showStatus={false}
+        className="!rounded-none"
+        style={{ borderRadius: "0" }}
+        indicators={false}
+        loop={true}
       >
-        <div>
-          <img src={caro1} />
-        </div>
-        <div>
-          <img src={caro2} />
-        </div>
-        <div>
-          <img src={caro3} />
-        </div>
+        <img src={pic1} alt="..." />
+        <img src={pic2} alt="..." />
+        <img src={pic3} alt="..." />
       </Carousel>
-    );
-  }
+    </div>
+  );
 }
