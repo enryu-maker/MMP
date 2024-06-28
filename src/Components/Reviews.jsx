@@ -1,8 +1,23 @@
 import React from "react";
 import about from "../images/about.png";
 import "youtube-video-js";
+import axios from "axios";
+import { baseurl } from "../Helper";
 
 function Reviews() {
+  const [data, setData] = React.useState([])
+  function getReviews() {
+    axios.get(baseurl + "/web/customer-reviews/").then((res) => {
+      setData(res.data)
+    })
+      .catch((err) => {
+        console.log(err)
+      })
+  }
+
+  React.useEffect(() => {
+    getReviews()
+  }, [])
   return (
     <div className="h-full w-full bg-green-50">
       <p className="text-center font-semibold text-4xl py-10">

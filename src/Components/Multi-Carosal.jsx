@@ -2,8 +2,23 @@ import { Carousel } from "flowbite-react";
 import pic1 from "../images/image-14.webp";
 import pic2 from "../images/image-15.webp";
 import pic3 from "../images/image-16.webp";
-
+import axios from "axios";
+import React from "react";
+import { baseurl } from "../Helper";
 export default function MultiCoro() {
+  const [data, setData] = React.useState([])
+  function getProperties() {
+    axios.get(baseurl + "/property/").then((res) => {
+      setData(res.data)
+    })
+      .catch((err) => {
+        console.log(err)
+      })
+  }
+
+  React.useEffect(() => {
+    getProperties()
+  }, [])
   return (
     <div className="flex flex-col bg-gray-50">
       <div className="w-screen flex flex-col justify-between items-center align-middle  px-5">

@@ -10,7 +10,7 @@ export function Nav() {
       <div className="flex flex-row justify-around items-center font-Poppins w-[88%] self-center">
         <Navbar.Brand href="https://flowbite-react.com">
           <span className="self-center whitespace-nowrap text-lg font-semibold dark:text-white">
-            <img src={logo} className="h-10"/>
+            <img src={logo} className="h-10" />
           </span>
         </Navbar.Brand>
         <Navbar.Collapse>
@@ -34,13 +34,13 @@ export function Nav() {
             }
             className="w-fit"
           >
-            <Dropdown.Item>All Projects</Dropdown.Item>
+            <Dropdown.Item href="#/properties-list/Residential">All Projects</Dropdown.Item>
             <Dropdown.Divider />
-            <Dropdown.Item>Ready Possesion</Dropdown.Item>
+            <Dropdown.Item href="#/properties-list/Residential">Ready Possesion</Dropdown.Item>
             <Dropdown.Divider />
-            <Dropdown.Item>Ongoing Projects</Dropdown.Item>
+            <Dropdown.Item href="#/properties-list/Residential">Ongoing Projects</Dropdown.Item>
             <Dropdown.Divider />
-            <Dropdown.Item>Upcoming Projects</Dropdown.Item>
+            <Dropdown.Item href="#/properties-list/Residential">Upcoming Projects</Dropdown.Item>
           </Dropdown>
           <Dropdown
             arrowIcon={true}
@@ -52,13 +52,13 @@ export function Nav() {
             }
             className="w-fit"
           >
-            <Dropdown.Item>All Projects</Dropdown.Item>
+            <Dropdown.Item href="#/properties-list/Residential">All Projects</Dropdown.Item>
             <Dropdown.Divider />
-            <Dropdown.Item>Ready Possesion</Dropdown.Item>
+            <Dropdown.Item href="#/properties-list/Residential">Ready Possesion</Dropdown.Item>
             <Dropdown.Divider />
-            <Dropdown.Item>Ongoing Projects</Dropdown.Item>
+            <Dropdown.Item href="#/properties-list/Residential">Ongoing Projects</Dropdown.Item>
             <Dropdown.Divider />
-            <Dropdown.Item>Upcoming Projects</Dropdown.Item>
+            <Dropdown.Item href="#/properties-list/Residential">Upcoming Projects</Dropdown.Item>
           </Dropdown>
 
           <Dropdown
@@ -71,7 +71,7 @@ export function Nav() {
             }
             className="w-fit"
           >
-            <Dropdown.Item>All Projects</Dropdown.Item>
+            <Dropdown.Item href="#/properties-list/Residential">All Projects</Dropdown.Item>
           </Dropdown>
           <Navbar.Link href="#/contact-us" className="text-lg text-black">
             <p className="text-lg hover:text-green-500 text-black">Contact</p>
