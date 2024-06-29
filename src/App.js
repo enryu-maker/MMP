@@ -41,6 +41,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact-us" element={<Contact />} />
+        <Route path="/properties-list/:slug/:slug1" element={<Property />} />
         <Route path="/properties-list/:slug" element={<Property />} />
         <Route path="/property/:slug" element={<PropertyInfo />} />
       </Routes>

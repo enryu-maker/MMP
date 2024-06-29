@@ -55,15 +55,15 @@ export function Nav() {
                 All Projects
               </Dropdown.Item>
               <Dropdown.Divider />
-              <Dropdown.Item href="#/properties-list/Residential">
+              <Dropdown.Item href="#/properties-list/Residential/Ready Possession">
                 Ready Possesion
               </Dropdown.Item>
               <Dropdown.Divider />
-              <Dropdown.Item href="#/properties-list/Residential">
+              <Dropdown.Item href="#/properties-list/Residential/Ongoing Projects">
                 Ongoing Projects
               </Dropdown.Item>
               <Dropdown.Divider />
-              <Dropdown.Item href="#/properties-list/Residential">
+              <Dropdown.Item href="#/properties-list/Residential/Upcoming Projects">
                 Upcoming Projects
               </Dropdown.Item>
             </Dropdown>
@@ -78,19 +78,19 @@ export function Nav() {
                 </p>
               }
             >
-              <Dropdown.Item href="#/properties-list/Residential">
+              <Dropdown.Item href="#/properties-list/Commercial">
                 All Projects
               </Dropdown.Item>
               <Dropdown.Divider />
-              <Dropdown.Item href="#/properties-list/Residential">
+              <Dropdown.Item href="#/properties-list/Commercial/Ready Possession">
                 Ready Possesion
               </Dropdown.Item>
               <Dropdown.Divider />
-              <Dropdown.Item href="#/properties-list/Residential">
+              <Dropdown.Item href="#/properties-list/Commercial/Ongoing Projects">
                 Ongoing Projects
               </Dropdown.Item>
               <Dropdown.Divider />
-              <Dropdown.Item href="#/properties-list/Residential">
+              <Dropdown.Item href="#/properties-list/Commercial/Upcoming Projects">
                 Upcoming Projects
               </Dropdown.Item>
             </Dropdown>
