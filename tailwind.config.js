@@ -1,8 +1,8 @@
 const flowbite = require("flowbite-react/tailwind");
-const withMT = require("@material-tailwind/react/utils/withMT");
+// const withMT = require("@material-tailwind/react/utils/withMT");
 
 /** @type {import('tailwindcss').Config} */
-module.exports = withMT({
+module.exports = {
   content: ["./src/**/*.{html,js,jsx}", flowbite.content()],
   theme: {
     extend: {
@@ -15,4 +15,4 @@ module.exports = withMT({
     // ...
     flowbite.plugin(),
   ],
-});
+};
