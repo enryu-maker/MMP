@@ -49,7 +49,7 @@ export function Nav() {
             <Dropdown
               arrowIcon={true}
               inline={true}
-              className="text-center md:w-fit w-full items-center align-middle h-full"
+              className="text-center md:w-fit w-full items-center align-middle h-fit md:h-fit"
               // onOpenChange={handleDropdownToggle}
               label={
                 <p className="text-lg md:py-0 py-2 text-center w-full items-center hover:text-green-500 text-black cursor-pointer">
@@ -76,7 +76,7 @@ export function Nav() {
             <Dropdown
               arrowIcon={true}
               inline={true}
-              className="text-center md:w-fit w-full items-center align-middle h-full"
+              className="text-center md:w-fit w-full items-center align-middle h-fit md:h-fit"
               // onOpenChange={handleDropdownToggle}
               label={
                 <p className="text-lg md:py-0 py-2 text-center w-full items-center hover:text-green-500 text-black cursor-pointer">
@@ -103,7 +103,7 @@ export function Nav() {
             <Dropdown
               arrowIcon={true}
               inline={true}
-              className="text-center md:w-fit w-full items-center align-middle h-full"
+              className="text-center md:w-fit w-full items-center align-middle h-fit md:h-fit"
               // onOpenChange={handleDropdownToggle}
               label={
                 <p className="text-lg md:py-0 py-2 text-center w-full items-center hover:text-green-500 text-black cursor-pointer">
