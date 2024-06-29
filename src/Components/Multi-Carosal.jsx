@@ -8,14 +8,14 @@ import { baseurl } from "../Helper";
 import { useNavigate } from "react-router-dom";
 
 export default function MultiCoro() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [data, setData] = React.useState([]);
   function getProperties() {
     axios
       .get(baseurl + "/property/featured/")
       .then((res) => {
         setData(res.data);
-        console.log(res.data)
+        console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -29,18 +29,17 @@ export default function MultiCoro() {
   const PropertyCard = ({ src, title, location, onPress, available_type }) => (
     <div
       onClick={onPress}
-      className="bg-white shadow-md rounded-lg cursor-pointer overflow-hidden">
-      <img src={src} alt={title} className="w-full" />
+      className="bg-white shadow-md rounded-lg cursor-pointer overflow-hidden"
+    >
+      <img src={src} alt={title} className="w-full bg-cover h-1/2" />
       <div className="p-2 md:p-4">
         <h3 className="text-md md:text-lg font-bold">{title}</h3>
         <div className="flex space-x-1 md:space-x-2 mt-2">
-          {
-            available_type?.map((item, index) => (
-              <span className="bg-gray-50 text-gray-800 text-base font-bold px-2 py-1 rounded">
-                {item?.type?.type}
-              </span>
-            ))
-          }
+          {available_type?.map((item, index) => (
+            <span className="bg-gray-50 text-gray-800 text-base font-bold px-2 py-1 rounded">
+              {item?.type?.type}
+            </span>
+          ))}
         </div>
         <p className="mt-2 text-xs md:text-sm text-gray-600">{location}</p>
         <button className="mt-2 md:mt-4 bg-green-500 text-white px-2 md:px-4 py-1 md:py-2 rounded">
@@ -100,25 +99,23 @@ export default function MultiCoro() {
             nextButtonClassName="bg-blue-500 text-white rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center"
           >
             {/* Desktop view: Three cards per slide */}
-            {
-              data?.map((item, index) => (
-                <div className="hidden md:flex p-4 gap-10">
-                  {
-                    item?.map((item, index) => (
-                      <PropertyCard
-                        onPress={() => {
-                          navigate(`/property/${item?.name}`, { state: { item: item } })
-                        }}
-                        available_type={item?.available_type}
-                        src={baseurl + item?.property_images[0].image}
-                        title={item?.name}
-                        location={item?.address}
-                      />
-                    ))
-                  }
-                </div>
-              ))
-            }
+            {data?.map((item, index) => (
+              <div className="hidden md:flex p-4 gap-10">
+                {item?.map((item, index) => (
+                  <PropertyCard
+                    onPress={() => {
+                      navigate(`/property/${item?.name}`, {
+                        state: { item: item },
+                      });
+                    }}
+                    available_type={item?.available_type}
+                    src={baseurl + item?.property_images[0].image}
+                    title={item?.name}
+                    location={item?.address}
+                  />
+                ))}
+              </div>
+            ))}
           </Carousel>
         </div>
       </div>
