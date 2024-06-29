@@ -12,16 +12,17 @@ import { Foot } from "./Components/Footer";
 // Register the loader
 ping.register();
 
+
 function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Set a timer to hide the loading screen after 3 seconds
+
     const timer = setTimeout(() => {
       setLoading(false);
     }, 1000);
 
-    // Cleanup the timer if the component is unmounted
+
     return () => clearTimeout(timer);
   }, []);
 

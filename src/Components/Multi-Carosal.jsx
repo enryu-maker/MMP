@@ -2,32 +2,26 @@ import { Carousel } from "flowbite-react";
 import pic1 from "../images/image-14.webp";
 import pic2 from "../images/image-15.webp";
 import pic3 from "../images/image-16.webp";
-
-const PropertyCard = ({ src, title, location }) => (
-  <div className="bg-white shadow-md rounded-lg overflow-hidden">
-    <img src={src} alt={title} className="w-full" />
-    <div className="p-2 md:p-4">
-      <h3 className="text-md md:text-lg font-bold">{title}</h3>
-      <div className="flex space-x-1 md:space-x-2 mt-2">
-        <span className="bg-gray-50 text-gray-700 text-xs font-medium px-1 md:px-2 py-1 rounded">
-          2 BHK
-        </span>
-        <span className="bg-gray-50 text-gray-700 text-xs font-medium px-1 md:px-2 py-1 rounded">
-          3 BHK
-        </span>
-        <span className="bg-gray-50 text-gray-700 text-xs font-medium px-1 md:px-2 py-1 rounded">
-          Shops
-        </span>
-      </div>
-      <p className="mt-2 text-xs md:text-sm text-gray-600">{location}</p>
-      <button className="mt-2 md:mt-4 bg-green-500 text-white px-2 md:px-4 py-1 md:py-2 rounded">
-        View
-      </button>
-    </div>
-  </div>
-);
+import axios from "axios";
+import React from "react";
+import { baseurl } from "../Helper";
 
 export default function MultiCoro() {
+  const [data, setData] = React.useState([]);
+  function getProperties() {
+    axios
+      .get(baseurl + "/property/")
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
+  React.useEffect(() => {
+    getProperties();
+  }, []);
   return (
     <div className="flex flex-col bg-gray-50">
       <div className="w-screen flex flex-col justify-between items-center align-middle px-2 md:px-5">
