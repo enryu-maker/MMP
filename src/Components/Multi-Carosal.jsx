@@ -110,7 +110,7 @@ export default function MultiCoro() {
                           navigate(`/property/${item?.name}`, { state: { item: item } })
                         }}
                         available_type={item?.available_type}
-                        src={baseurl + item?.property_images[0].image}
+                        src={baseurl + item?.property_images[0]?.image}
                         title={item?.name}
                         location={item?.address}
                       />

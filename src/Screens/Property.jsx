@@ -37,7 +37,7 @@ export default function Property() {
                 navigate(`/property/${item?.name}`, { state: { item: item } })
               }}
               className="bg-white sm:w-[380px] w-[92%] m-2 shadow-md rounded-lg cursor-pointer overflow-hidden">
-              <img src={baseurl + item?.property_images[0].image} alt={item?.name} className="w-full" />
+              <img src={baseurl + item?.property_images[0]?.image} alt={item?.name} className="w-full" />
               <div className="p-2 md:p-4">
                 <h3 className="text-md md:text-lg font-bold">{item?.name}</h3>
                 <div className="flex space-x-1 md:space-x-2 mt-2">

@@ -1,8 +1,5 @@
 import React from 'react'
 import { Carousel } from "flowbite-react";
-import pic1 from "../images/image-14.webp";
-import pic2 from "../images/image-15.webp";
-import pic3 from "../images/image-16.webp";
 import { useLocation } from 'react-router-dom';
 import { baseurl } from '../Helper';
 export default function PropertyInfo() {
@@ -17,8 +14,8 @@ export default function PropertyInfo() {
                     loop={true}
                 >
                     <div className='flex w-full h-full'>
-                        <img className=' object-contain w-[50%] ' src={baseurl + state?.item?.property_images[0].image} alt="..." />
-                        <img className=' object-contain w-[50%]' src={baseurl + state?.item?.property_images[1].image} alt="..." />
+                        <img className=' object-contain w-[50%] ' src={baseurl + state?.item?.property_images[0]?.image} alt="..." />
+                        <img className=' object-contain w-[50%]' src={baseurl + state?.item?.property_images[1]?.image} alt="..." />
                     </div>
                 </Carousel>
             </div>
