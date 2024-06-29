@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Avatar, Dropdown, Navbar } from "flowbite-react";
 import logo from "../images/logo2.png";
-import { motion } from "framer-motion";
 
 export function Nav() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
