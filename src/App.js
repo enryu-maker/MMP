@@ -8,20 +8,18 @@ import About from "./Screens/About";
 import Contact from "./Screens/Contact";
 import { ping } from "ldrs";
 import { Foot } from "./Components/Footer";
+import { Nav2, NavbarWithMegaMenu } from "./Components/Nav2";
 
 // Register the loader
 ping.register();
-
 
 function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-
     const timer = setTimeout(() => {
       setLoading(false);
     }, 1000);
-
 
     return () => clearTimeout(timer);
   }, []);

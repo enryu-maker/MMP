@@ -6,6 +6,7 @@ import Locations from "../Components/Locations";
 import About from "../Components/About";
 import Reviews from "../Components/Reviews";
 import Banner from "../Components/Banner";
+import { Button } from "@mui/material";
 
 function Home() {
   return (

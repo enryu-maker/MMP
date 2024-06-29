@@ -7,6 +7,7 @@ import { IMAGE } from "../images/Images";
 import axios from "axios";
 import { baseurl } from "../Helper";
 import React from "react";
+
 export default function Achive() {
   const [data, setData] = React.useState([]);
   function getAchievements() {
