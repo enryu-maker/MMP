@@ -19,14 +19,14 @@ export function Nav() {
         <div
           className={`flex md:flex-row ${
             isDropdownOpen ? "flex-col gap-3" : "flex-row"
-          } justify-between items-center font-Poppins w-[88%] self-center`}
+          } justify-between items-center font-Poppins w-full self-center `}
         >
           <Navbar.Brand href="https://flowbite-react.com">
             <span className="self-center whitespace-nowrap text-lg font-semibold dark:text-white">
               <img src={logo} className="h-10" />
             </span>
           </Navbar.Brand>
-          <div onClick={handleDropdownToggle}>
+          <div onClick={handleDropdownToggle} className="">
             <Navbar.Toggle />
           </div>
           <Navbar.Collapse>
