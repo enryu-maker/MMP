@@ -9,10 +9,9 @@ export default function Property() {
   const navigate = useNavigate()
   const state = useLocation()
   const [data, setData] = React.useState([]);
-  console.log(state?.pathname?.split('/').length === 3 ? `/property/${state?.pathname?.split('/')[2]}/` : `/property/?category=${state?.pathname?.split('/')[2]}&possession=${state?.pathname?.split('/')[3]}`)
   function getProperties() {
     axios
-      .get(state?.pathname?.split('/').length === 3 ? baseurl + `/property/?category=${state?.pathname?.split('/')[2]}` : baseurl + `/property/?category=${state?.pathname?.split('/')[2]}&possession=${state?.pathname?.split('/')[3]}`)
+      .get(state?.pathname?.split('/').length === 3 ? baseurl + `/property/?category=${state?.pathname?.split('/')[2]}` : baseurl + `/property/?category=${state?.pathname?.split('/')[2]}&possession_type=${state?.pathname?.split('/')[3]}`)
       .then((res) => {
         setData(res.data);
         console.log(res.data)

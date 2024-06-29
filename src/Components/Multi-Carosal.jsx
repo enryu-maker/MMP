@@ -95,7 +95,7 @@ export default function MultiCoro() {
             loop={true}
             indicators={false}
             hover
-            className="w-full h-[300px] md:h-[500px] px-4 md:px-20 "
+            className="w-full h-[300px] md:h-[500px] px-4 md:px-20"
             prevButtonClassName="bg-blue-500 text-white rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center"
             nextButtonClassName="bg-blue-500 text-white rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center"
           >

@@ -111,7 +111,7 @@ export function Nav() {
                 </p>
               }
             >
-              <Dropdown.Item href="#/properties-list/Residential">
+              <Dropdown.Item href="#/properties-list/NA Plots">
                 All Projects
               </Dropdown.Item>
             </Dropdown>
