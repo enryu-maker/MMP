@@ -31,7 +31,7 @@ export default function MultiCoro() {
       onClick={onPress}
       className="bg-white shadow-md rounded-lg cursor-pointer overflow-hidden"
     >
-      <img src={src} alt={title} className="w-full bg-cover h-1/2" />
+      <img src={src} alt={title} className="w-[500px] bg-cover h-[200px] " />
       <div className="p-2 md:p-4">
         <h3 className="text-md md:text-lg font-bold">{title}</h3>
         <div className="flex space-x-1 md:space-x-2 mt-2">
