@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Avatar, Dropdown, Navbar } from "flowbite-react";
 import logo from "../images/logo2.png";
 import { motion, AnimatePresence } from "framer-motion";
@@ -8,7 +8,21 @@ export function Nav() {
   const handleDropdownToggle = () => {
     setIsDropdownOpen((prev) => !prev);
   };
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null);
+
+  const handleClickOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
@@ -147,15 +161,17 @@ export function Nav() {
           </AnimatePresence>
 
           <AnimatePresence>
-            {!isOpen && (
+            {isOpen && (
               <motion.div
+                key="menu"
+                ref={menuRef}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}
-                className=" md:items-center md:hidden md:justify-between"
+                className="md:items-center md:hidden md:justify-between overflow-x-hidden"
               >
-                <Navbar.Collapse className="md:flex md:items-center">
+                <Navbar.Collapse className="md:flex md:items-center pr-2">
                   <Navbar.Link
                     href="#"
                     className="text-lg text-black hover:text-green-500 text-start md:w-auto w-screen items-start align-middle h-full"
@@ -168,72 +184,79 @@ export function Nav() {
                   >
                     About Us
                   </Navbar.Link>
-                  <Dropdown
-                    arrowIcon={true}
-                    inline={true}
-                    className="text-start md:w-auto w-full overflow-x-hidden justify-start flex items-start align-middle h-fit md:h-fit"
-                    label={
-                      <p className="text-lg md:py-0 py-2 text-start w-full items-center px-3 hover:text-green-500 text-black cursor-pointer">
-                        Residential
-                      </p>
-                    }
-                  >
-                    <Dropdown.Item href="#/properties-list/Residential">
-                      All Projects
-                    </Dropdown.Item>
-                    <Dropdown.Divider />
-                    <Dropdown.Item href="#/properties-list/Residential/Ready Possession">
-                      Ready Possession
-                    </Dropdown.Item>
-                    <Dropdown.Divider />
-                    <Dropdown.Item href="#/properties-list/Residential/Ongoing Projects">
-                      Ongoing Projects
-                    </Dropdown.Item>
-                    <Dropdown.Divider />
-                    <Dropdown.Item href="#/properties-list/Residential/Upcoming Projects">
-                      Upcoming Projects
-                    </Dropdown.Item>
-                  </Dropdown>
-                  <Dropdown
-                    arrowIcon={true}
-                    inline={true}
-                    className="text-start md:w-auto w-full overflow-x-hidden justify-start flex items-start align-middle h-fit md:h-fit"
-                    label={
-                      <p className="text-lg md:py-0 py-2 text-start w-full items-center px-3 hover:text-green-500 text-black cursor-pointer">
-                        Commercial
-                      </p>
-                    }
-                  >
-                    <Dropdown.Item href="#/properties-list/Commercial">
-                      All Projects
-                    </Dropdown.Item>
-                    <Dropdown.Divider />
-                    <Dropdown.Item href="#/properties-list/Commercial/Ready Possession">
-                      Ready Possession
-                    </Dropdown.Item>
-                    <Dropdown.Divider />
-                    <Dropdown.Item href="#/properties-list/Commercial/Ongoing Projects">
-                      Ongoing Projects
-                    </Dropdown.Item>
-                    <Dropdown.Divider />
-                    <Dropdown.Item href="#/properties-list/Commercial/Upcoming Projects">
-                      Upcoming Projects
-                    </Dropdown.Item>
-                  </Dropdown>
-                  <Dropdown
-                    arrowIcon={true}
-                    inline={true}
-                    className="text-start md:w-auto w-full overflow-x-hidden justify-start flex items-start align-middle h-fit md:h-fit"
-                    label={
-                      <p className="text-lg md:py-0 py-2 text-start w-full items-center px-3 hover:text-green-500 text-black cursor-pointer">
-                        Na Plots
-                      </p>
-                    }
-                  >
-                    <Dropdown.Item href="#/properties-list/NA Plots">
-                      All Projects
-                    </Dropdown.Item>
-                  </Dropdown>
+                  <div className="">
+                    <Dropdown
+                      arrowIcon={true}
+                      inline={true}
+                      className="text-start md:w-fit w-fit overflow-x-hidden justify-start flex items-start align-middle h-fit md:h-fit"
+                      label={
+                        <p className="text-lg md:py-0 py-2 text-start w-fit flex items-center px-3 hover:text-green-500 text-black cursor-pointer">
+                          Residential
+                        </p>
+                      }
+                    >
+                      <Dropdown.Item href="#/properties-list/Residential">
+                        All Projects
+                      </Dropdown.Item>
+                      <Dropdown.Divider />
+                      <Dropdown.Item href="#/properties-list/Residential/Ready Possession">
+                        Ready Possession
+                      </Dropdown.Item>
+                      <Dropdown.Divider />
+                      <Dropdown.Item href="#/properties-list/Residential/Ongoing Projects">
+                        Ongoing Projects
+                      </Dropdown.Item>
+                      <Dropdown.Divider />
+                      <Dropdown.Item href="#/properties-list/Residential/Upcoming Projects">
+                        Upcoming Projects
+                      </Dropdown.Item>
+                    </Dropdown>
+                  </div>
+                  <div>
+                    <Dropdown
+                      arrowIcon={true}
+                      inline={true}
+                      className="text-start md:w-fit w-fit overflow-x-hidden justify-start flex items-start align-middle h-fit md:h-fit"
+                      label={
+                        <p className="text-lg md:py-0 py-2 text-start w-fit flex items-center px-3 hover:text-green-500 text-black cursor-pointer">
+                          Commercial
+                        </p>
+                      }
+                    >
+                      <Dropdown.Item href="#/properties-list/Commercial">
+                        All Projects
+                      </Dropdown.Item>
+                      <Dropdown.Divider />
+                      <Dropdown.Item href="#/properties-list/Commercial/Ready Possession">
+                        Ready Possession
+                      </Dropdown.Item>
+                      <Dropdown.Divider />
+                      <Dropdown.Item href="#/properties-list/Commercial/Ongoing Projects">
+                        Ongoing Projects
+                      </Dropdown.Item>
+                      <Dropdown.Divider />
+                      <Dropdown.Item href="#/properties-list/Commercial/Upcoming Projects">
+                        Upcoming Projects
+                      </Dropdown.Item>
+                    </Dropdown>
+                  </div>
+                  <div>
+                    <Dropdown
+                      arrowIcon={true}
+                      inline={true}
+                      className="text-start md:w-auto w-fit overflow-x-hidden justify-start flex items-start align-middle h-fit md:h-fit"
+                      label={
+                        <p className="text-lg md:py-0 py-2 text-start w-fit items-center px-3 hover:text-green-500 text-black cursor-pointer">
+                          Na Plots
+                        </p>
+                      }
+                    >
+                      <Dropdown.Item href="#/properties-list/NA Plots">
+                        All Projects
+                      </Dropdown.Item>
+                    </Dropdown>
+                  </div>
+
                   <Navbar.Link
                     href="#/contact-us"
                     className="text-lg text-black items-center align-middle h-full md:w-auto w-full text-start"
