@@ -18,21 +18,27 @@ export function Nav() {
       >
         <div
           className={`flex md:flex-row ${
-            isDropdownOpen ? "flex-col gap-3" : "flex-row"
+            isDropdownOpen ? "flex-col " : "flex-col"
           } justify-between items-center font-Poppins w-full self-center `}
         >
-          <Navbar.Brand href="https://flowbite-react.com">
-            <span className="self-center whitespace-nowrap text-lg font-semibold dark:text-white">
-              <img src={logo} className="h-10" />
-            </span>
-          </Navbar.Brand>
-          <div onClick={handleDropdownToggle} className="">
-            <Navbar.Toggle />
+          <div className="grid grid-cols-2 justify-between w-full ">
+            <div className="justify-start flex">
+              <Navbar.Brand href="#/">
+                <span className="self-center whitespace-nowrap text-lg font-semibold dark:text-white">
+                  <img src={logo} className="h-10" />
+                </span>
+              </Navbar.Brand>
+            </div>
+
+            <div onClick={handleDropdownToggle} className="justify-end flex">
+              <Navbar.Toggle />
+            </div>
           </div>
-          <Navbar.Collapse>
+
+          <Navbar.Collapse className="flex justify-start items-start">
             <Navbar.Link
               href="#"
-              className="text-lg text-black hover:text-green-500  text-center md:w-fit w-full items-center align-middle h-full"
+              className="text-lg text-black hover:text-green-500 text-start md:w-fit w-full items-center align-middle h-full"
             >
               <p className="text-lg hover:text-green-500 text-black items-center align-middle h-full">
                 Home
@@ -40,7 +46,7 @@ export function Nav() {
             </Navbar.Link>
             <Navbar.Link
               href="#/about"
-              className="text-lg text-black text-center md:w-fit w-full items-center align-middle h-full"
+              className="text-lg text-black text-start md:w-fit w-full items-center align-middle h-full"
             >
               <p className="text-lg hover:text-green-500 text-black">
                 About Us
@@ -49,10 +55,10 @@ export function Nav() {
             <Dropdown
               arrowIcon={true}
               inline={true}
-              className="text-center md:w-fit w-full items-center align-middle h-fit md:h-fit"
+              className="text-start md:w-fit w-full items-center align-middle h-fit md:h-fit"
               // onOpenChange={handleDropdownToggle}
               label={
-                <p className="text-lg md:py-0 py-2 text-center w-full items-center hover:text-green-500 text-black cursor-pointer">
+                <p className="text-lg md:py-0 py-2 text-start w-full items-start hover:text-green-500 text-black cursor-pointer">
                   Residential
                 </p>
               }
@@ -79,7 +85,7 @@ export function Nav() {
               className="text-center md:w-fit w-full items-center align-middle h-fit md:h-fit"
               // onOpenChange={handleDropdownToggle}
               label={
-                <p className="text-lg md:py-0 py-2 text-center w-full items-center hover:text-green-500 text-black cursor-pointer">
+                <p className="text-lg md:py-0 py-2 text-start w-full items-start hover:text-green-500 text-black cursor-pointer">
                   Commercial
                 </p>
               }
@@ -106,7 +112,7 @@ export function Nav() {
               className="text-center md:w-fit w-full items-center align-middle h-fit md:h-fit"
               // onOpenChange={handleDropdownToggle}
               label={
-                <p className="text-lg md:py-0 py-2 text-center w-full items-center hover:text-green-500 text-black cursor-pointer">
+                <p className="text-lg md:py-0 py-2 text-start w-full items-start hover:text-green-500 text-black cursor-pointer">
                   Na Plots
                 </p>
               }
@@ -117,9 +123,9 @@ export function Nav() {
             </Dropdown>
             <Navbar.Link
               href="#/contact-us"
-              className="text-lg text-black items-center align-middle h-full"
+              className="text-lg text-black items-start bg-red-200 align-middle h-full"
             >
-              <p className="text-lg hover:text-green-500 text-black text-center md:w-fit w-full items-center align-middle h-full">
+              <p className="text-lg hover:text-green-500 text-black text-start md:w-fit w-full items-start align-middle h-full">
                 Contact
               </p>
             </Navbar.Link>
