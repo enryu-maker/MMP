@@ -2,14 +2,17 @@ import { useState, useRef, useEffect } from "react";
 import { Avatar, Dropdown, Navbar } from "flowbite-react";
 import logo from "../images/logo2.png";
 import { motion, AnimatePresence } from "framer-motion";
+import { redirect } from "react-router-dom";
 export function Nav() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [reloadKey, setReloadKey] = useState(0);
+  const menuRef = useRef(null);
+  const toggleRef = useRef(null);
 
   const handleDropdownToggle = () => {
     setIsDropdownOpen((prev) => !prev);
   };
-  const [isOpen, setIsOpen] = useState(false);
-  const menuRef = useRef(null);
 
   const handleClickOutside = (event) => {
     if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -27,8 +30,13 @@ export function Nav() {
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
+
+  const handleDropdownItemClick = async () => {
+    setReloadKey((prevKey) => prevKey + 1);
+  };
+
   return (
-    <div>
+    <div key={reloadKey}>
       <Navbar
         fluid
         rounded
@@ -47,24 +55,19 @@ export function Nav() {
             </Navbar.Brand>
             <motion.div
               onClick={handleToggle}
+              ref={toggleRef}
               className="justify-end items-end flex "
             >
               <Navbar.Toggle />
             </motion.div>
           </div>
           <AnimatePresence>
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
-              className="md:flex md:items-end md:w-[2000px] md:flex-row align-middle md:h-fit hidden md:justify-end "
-            >
+            <motion.div className="md:flex md:items-end md:w-[2000px] md:flex-row align-middle md:h-fit hidden md:justify-end ">
               <Navbar.Collapse className="md:flex md:flex-row md:justify-end md:items-end md:gap-10">
                 <motion.div className="md:flex md:flex-row md:justify-start md:items-end md:gap-5">
                   <Navbar.Link
                     href="#"
-                    className="text-lg text-black hover:text-green-500  text-center md:w-fit w-full items-center align-middle h-full"
+                    className="text-lg text-black hover:text-green-500 text-center md:w-fit w-full items-center align-middle h-full"
                   >
                     <p className="text-lg hover:text-green-500 text-black items-center align-middle h-full">
                       Home
@@ -89,19 +92,31 @@ export function Nav() {
                       </p>
                     }
                   >
-                    <Dropdown.Item href="#/properties-list/Residential">
+                    <Dropdown.Item
+                      href="#/properties-list/Residential"
+                      onClick={handleDropdownItemClick}
+                    >
                       All Projects
                     </Dropdown.Item>
                     <Dropdown.Divider />
-                    <Dropdown.Item href="#/properties-list/Residential/Ready Possession">
-                      Ready Possesion
+                    <Dropdown.Item
+                      href="#/properties-list/Residential/Ready Possession"
+                      onClick={handleDropdownItemClick}
+                    >
+                      Ready Possession
                     </Dropdown.Item>
                     <Dropdown.Divider />
-                    <Dropdown.Item href="#/properties-list/Residential/Ongoing Projects">
+                    <Dropdown.Item
+                      href="#/properties-list/Residential/Ongoing Projects"
+                      onClick={handleDropdownItemClick}
+                    >
                       Ongoing Projects
                     </Dropdown.Item>
                     <Dropdown.Divider />
-                    <Dropdown.Item href="#/properties-list/Residential/Upcoming Projects">
+                    <Dropdown.Item
+                      href="#/properties-list/Residential/Upcoming Projects"
+                      onClick={handleDropdownItemClick}
+                    >
                       Upcoming Projects
                     </Dropdown.Item>
                   </Dropdown>
@@ -116,19 +131,31 @@ export function Nav() {
                       </p>
                     }
                   >
-                    <Dropdown.Item href="#/properties-list/Commercial">
+                    <Dropdown.Item
+                      href="#/properties-list/Commercial"
+                      onClick={handleDropdownItemClick}
+                    >
                       All Projects
                     </Dropdown.Item>
                     <Dropdown.Divider />
-                    <Dropdown.Item href="#/properties-list/Commercial/Ready Possession">
-                      Ready Possesion
+                    <Dropdown.Item
+                      href="#/properties-list/Commercial/Ready Possession"
+                      onClick={handleDropdownItemClick}
+                    >
+                      Ready Possession
                     </Dropdown.Item>
                     <Dropdown.Divider />
-                    <Dropdown.Item href="#/properties-list/Commercial/Ongoing Projects">
+                    <Dropdown.Item
+                      href="#/properties-list/Commercial/Ongoing Projects"
+                      onClick={handleDropdownItemClick}
+                    >
                       Ongoing Projects
                     </Dropdown.Item>
                     <Dropdown.Divider />
-                    <Dropdown.Item href="#/properties-list/Commercial/Upcoming Projects">
+                    <Dropdown.Item
+                      href="#/properties-list/Commercial/Upcoming Projects"
+                      onClick={handleDropdownItemClick}
+                    >
                       Upcoming Projects
                     </Dropdown.Item>
                   </Dropdown>
@@ -143,7 +170,10 @@ export function Nav() {
                       </p>
                     }
                   >
-                    <Dropdown.Item href="#/properties-list/NA Plots">
+                    <Dropdown.Item
+                      href="#/properties-list/NA Plots"
+                      onClick={handleDropdownItemClick}
+                    >
                       All Projects
                     </Dropdown.Item>
                   </Dropdown>
@@ -195,19 +225,31 @@ export function Nav() {
                         </p>
                       }
                     >
-                      <Dropdown.Item href="#/properties-list/Residential">
+                      <Dropdown.Item
+                        href="#/properties-list/Residential"
+                        onClick={handleDropdownItemClick}
+                      >
                         All Projects
                       </Dropdown.Item>
                       <Dropdown.Divider />
-                      <Dropdown.Item href="#/properties-list/Residential/Ready Possession">
+                      <Dropdown.Item
+                        href="#/properties-list/Residential/Ready Possession"
+                        onClick={handleDropdownItemClick}
+                      >
                         Ready Possession
                       </Dropdown.Item>
                       <Dropdown.Divider />
-                      <Dropdown.Item href="#/properties-list/Residential/Ongoing Projects">
+                      <Dropdown.Item
+                        href="#/properties-list/Residential/Ongoing Projects"
+                        onClick={handleDropdownItemClick}
+                      >
                         Ongoing Projects
                       </Dropdown.Item>
                       <Dropdown.Divider />
-                      <Dropdown.Item href="#/properties-list/Residential/Upcoming Projects">
+                      <Dropdown.Item
+                        href="#/properties-list/Residential/Upcoming Projects"
+                        onClick={handleDropdownItemClick}
+                      >
                         Upcoming Projects
                       </Dropdown.Item>
                     </Dropdown>
@@ -223,19 +265,31 @@ export function Nav() {
                         </p>
                       }
                     >
-                      <Dropdown.Item href="#/properties-list/Commercial">
+                      <Dropdown.Item
+                        href="#/properties-list/Commercial"
+                        onClick={handleDropdownItemClick}
+                      >
                         All Projects
                       </Dropdown.Item>
                       <Dropdown.Divider />
-                      <Dropdown.Item href="#/properties-list/Commercial/Ready Possession">
+                      <Dropdown.Item
+                        href="#/properties-list/Commercial/Ready Possession"
+                        onClick={handleDropdownItemClick}
+                      >
                         Ready Possession
                       </Dropdown.Item>
                       <Dropdown.Divider />
-                      <Dropdown.Item href="#/properties-list/Commercial/Ongoing Projects">
+                      <Dropdown.Item
+                        href="#/properties-list/Commercial/Ongoing Projects"
+                        onClick={handleDropdownItemClick}
+                      >
                         Ongoing Projects
                       </Dropdown.Item>
                       <Dropdown.Divider />
-                      <Dropdown.Item href="#/properties-list/Commercial/Upcoming Projects">
+                      <Dropdown.Item
+                        href="#/properties-list/Commercial/Upcoming Projects"
+                        onClick={handleDropdownItemClick}
+                      >
                         Upcoming Projects
                       </Dropdown.Item>
                     </Dropdown>
@@ -251,7 +305,10 @@ export function Nav() {
                         </p>
                       }
                     >
-                      <Dropdown.Item href="#/properties-list/NA Plots">
+                      <Dropdown.Item
+                        href="#/properties-list/NA Plots"
+                        onClick={handleDropdownItemClick}
+                      >
                         All Projects
                       </Dropdown.Item>
                     </Dropdown>
