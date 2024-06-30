@@ -47,7 +47,7 @@ export default function Property() {
             <img
               src={baseurl + item?.property_images[0].image}
               alt={item?.name}
-              className="w-[500px] h-[250px] bg-cover"
+              className="md:w-[500px] md:h-[250px] md:bg-cover w-full h-[250px] bg-cover"
             />
             <div className="p-2 md:p-4">
               <h3 className="text-md md:text-lg font-bold">{item?.name}</h3>
