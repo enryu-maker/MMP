@@ -36,35 +36,37 @@ export default function Property() {
       <div className="h-[200px] w-full bg-green-500 text-white px-10 text-4xl font-black tracking-wide flex items-center">
         Property List
       </div>
-      <div className=' flex w-full flex-wrap justify-evenly my-8'>
-        {
-          data.map((item, index) => (
-            <div
-              onClick={() => {
-                navigate(`/property/${item?.name}`, { state: { item: item } })
-              }}
-              className="bg-white sm:w-[380px] w-[92%] m-2 shadow-md rounded-lg cursor-pointer overflow-hidden">
-              <img src={baseurl + item?.property_images[0].image} alt={item?.name} className="w-full" />
-              <div className="p-2 md:p-4">
-                <h3 className="text-md md:text-lg font-bold">{item?.name}</h3>
-                <div className="flex space-x-1 md:space-x-2 mt-2">
-                  {
-                    item?.available_type?.map((item, index) => (
-                      <span className="bg-gray-50 text-gray-800 text-base font-bold px-2 py-1 rounded">
-                        {item?.type?.type}
-                      </span>
-                    ))
-                  }
-                </div>
-                <p className="mt-2 text-xs md:text-sm text-gray-600">{item?.address}</p>
-                <button className="mt-2 md:mt-4 bg-green-500 text-white px-2 md:px-4 py-1 md:py-2 rounded">
-                  View
-                </button>
+      <div className=" flex w-full flex-wrap justify-evenly my-8">
+        {data.map((item, index) => (
+          <div
+            onClick={() => {
+              navigate(`/property/${item?.name}`, { state: { item: item } });
+            }}
+            className="bg-white sm:w-[380px] w-[92%] m-2 shadow-md rounded-lg cursor-pointer overflow-hidden"
+          >
+            <img
+              src={baseurl + item?.property_images[0].image}
+              alt={item?.name}
+              className="w-[500px] h-[250px] bg-cover"
+            />
+            <div className="p-2 md:p-4">
+              <h3 className="text-md md:text-lg font-bold">{item?.name}</h3>
+              <div className="flex space-x-1 md:space-x-2 mt-2">
+                {item?.available_type?.map((item, index) => (
+                  <span className="bg-gray-50 text-gray-800 text-base font-bold px-2 py-1 rounded">
+                    {item?.type?.type}
+                  </span>
+                ))}
               </div>
+              <p className="mt-2 text-xs md:text-sm text-gray-600">
+                {item?.address}
+              </p>
+              <button className="mt-2 md:mt-4 bg-green-500 text-white px-2 md:px-4 py-1 md:py-2 rounded">
+                View
+              </button>
             </div>
-          ))
-        }
-
+          </div>
+        ))}
       </div>
     </div>
   );
