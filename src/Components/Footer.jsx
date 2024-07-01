@@ -59,14 +59,13 @@ export function Foot() {
               <Footer.Title title="Contact" />
               <Footer.LinkGroup col>
                 <Footer.Link href="#" className="hover:text-green-500">
-                  Shree Tirumala Ashirwad Apt, Pethe Nagar Rd (Indira Nagar),
-                  Opp. Balbharti, Nashik 422009.
+                  Flat no. 11 Shivangi Appartment Dallubhai Patel colony Untawadi Nashik 422009
                 </Footer.Link>
-                <Footer.Link href="#" className="hover:text-green-500">
-                  +91 7770002222
+                <Footer.Link href="tel:+919029263511" className="hover:text-green-500">
+                  +91 9029263511
                 </Footer.Link>
-                <Footer.Link href="#" className="hover:text-green-500">
-                  Connect@roongtagroup.co.in
+                <Footer.Link href="mailto:info@makemyproperties.co.in" className="hover:text-green-500">
+                  info@makemyproperties.co.in
                 </Footer.Link>
               </Footer.LinkGroup>
             </div>

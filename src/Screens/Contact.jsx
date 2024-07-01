@@ -39,15 +39,15 @@ export default function Contact() {
                     <p className=' text-base'>Drop your requirments we will get back to you as soon as possible.</p>
                     <h3 className="text-xl font-black">Reach Us</h3>
                     <p className=' text-base'>
-                        1st Floor Office No.6, Jagdish Sankul, KBT Circle, near Wellness Medical, Thatte Nagar, Nashik, Maharashtra 422005
+                    Flat no. 11 Shivangi Appartment Dallubhai Patel colony Untawadi Nashik 422009
                     </p>
                     <h3 className="text-xl font-black">Drop a Mail</h3>
                     <p className=' text-base'>
-                        <a href="mailto:info@kbt.in" > info@kbt.in </a>
+                        <a href="mailto:info@makemyproperties.co.in" > info@makemyproperties.co.in </a>
                     </p>
                     <h3 className="text-xl font-black">Call Us</h3>
                     <p className=' text-base'>
-                        <a href="tel:+917770002222" > +91 7770002222 </a>
+                        <a href="tel:+919029263511" > +91 9029263511 </a>
                     </p>
 
 

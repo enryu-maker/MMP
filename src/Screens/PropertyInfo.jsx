@@ -5,8 +5,26 @@ import pic2 from "../images/image-15.webp";
 import pic3 from "../images/image-16.webp";
 import { useLocation } from 'react-router-dom';
 import { baseurl } from '../Helper';
+import axios from "axios";
 export default function PropertyInfo() {
     const { state } = useLocation()
+    const [data,setData] = React.useState({
+      property:state?.item?.id,
+      name:"",
+      email:"",
+      phone_number:"",
+    })
+    async function sendEnquiry(data) {
+      await axios
+        .post(baseurl + "/property/inquiry/",data)
+        .then((res) => {
+          alert("Enquiry Sent")
+          console.log(res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
     return (
         <div className='h-full w-full flex flex-col justify-center font-Poppins items-center bg-slate-50'>
             <div className='sm:h-[50vh] h-[20vh] w-[92%] !rounded-none my-10'>
@@ -17,8 +35,8 @@ export default function PropertyInfo() {
                     loop={true}
                 >
                     <div className='flex w-full h-full'>
-                        <img className=' object-contain w-[50%] ' src={baseurl + state?.item?.property_images[0].image} alt="..." />
-                        <img className=' object-contain w-[50%]' src={baseurl + state?.item?.property_images[1].image} alt="..." />
+                        <img className=' object-contain w-[50%] ' src={baseurl + state?.item?.property_images[0]?.image} alt="..." />
+                        <img className=' object-contain w-[50%]' src={baseurl + state?.item?.property_images[1]?.image} alt="..." />
                     </div>
                 </Carousel>
             </div>
@@ -104,19 +122,33 @@ export default function PropertyInfo() {
               <input
                 placeholder="Your Name"
                 type="text"
+                onChange={(e)=>{
+                  setData({...data, name:e.target.value})
+                }}
                 className="font-semibold bg-gray-100 border-none rounded-md    w-[88%] px-6 py-4 text-lg"
               />
               <input
                 placeholder="Your Phone"
                 type="tel"
+                onChange={(e)=>{
+                  setData({...data, phone_number:e.target.value})
+                  }}
                 className="font-semibold bg-gray-100   w-[88%] px-6 border-none rounded-md  py-4 text-lg"
               />
               <input
                 placeholder="Your Email"
                 type="email"
+                onChange={(e)=>{
+                  setData({...data, email:e.target.value})
+                  }}
                 className="font-semibold bg-gray-100 w-[88%] px-6 border-none rounded-md  py-4 text-lg"
               />
-              <button className="bg-slate-800 w-[88%] py-4 mb-5 font-semibold text-xl text-white">
+              <button onClick={()=>{
+                console.log(data)
+                if(data.name && data.phone_number && data.email){
+                  sendEnquiry(data)
+                }
+              }} className="bg-slate-800 w-[88%] py-4 mb-5 font-semibold text-xl text-white">
                 Send Enquiry
               </button>
             </div>

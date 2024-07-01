@@ -1,7 +1,4 @@
 import { Carousel } from "flowbite-react";
-import pic1 from "../images/image-14.webp";
-import pic2 from "../images/image-15.webp";
-import pic3 from "../images/image-16.webp";
 import axios from "axios";
 import React from "react";
 import { baseurl } from "../Helper";
@@ -10,6 +7,8 @@ import { useNavigate } from "react-router-dom";
 export default function MultiCoro() {
   const navigate = useNavigate();
   const [data, setData] = React.useState([]);
+  const [data2, setData2] = React.useState([]);
+
   function getProperties() {
     axios
       .get(baseurl + "/property/featured/")
@@ -21,9 +20,21 @@ export default function MultiCoro() {
         console.log(err);
       });
   }
+  function getProperty() {
+    axios
+      .get(baseurl + "/property/")
+      .then((res) => {
+        setData2(res.data);
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
 
   React.useEffect(() => {
     getProperties();
+    getProperty()
   }, []);
 
   const PropertyCard = ({ src, title, location, onPress, available_type }) => (
@@ -66,27 +77,22 @@ export default function MultiCoro() {
           nextButtonClassName="bg-blue-500 text-white rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center"
         >
           {/* Mobile view: One card per slide */}
-          <div className="p-2 md:hidden">
-            <PropertyCard
-              src={pic1}
-              title="Roongta Grandezza"
-              location="Govind Nagar, Off 100ft Ring Road"
-            />
-          </div>
-          <div className="p-2 md:hidden">
-            <PropertyCard
-              src={pic2}
-              title="Roongta Grandezza"
-              location="Govind Nagar, Off 100ft Ring Road"
-            />
-          </div>
-          <div className="p-2 md:hidden">
-            <PropertyCard
-              src={pic3}
-              title="Roongta Grandezza"
-              location="Govind Nagar, Off 100ft Ring Road"
-            />
-          </div>
+          {
+            data2?.map((item, index) => (
+              <div className="p-2 md:hidden">
+                <PropertyCard
+                  onPress={() => {
+                    navigate(`/property/${item?.name}`, { state: { item: item } })
+                  }}
+                  available_type={item?.available_type}
+                  src={baseurl + item?.property_images[0].image}
+                  title={item?.name}
+                  location={item?.address}
+                />
+              </div>
+            ))
+          }
+
         </Carousel>
         <div className="md:contents hidden ">
           <Carousel

@@ -9,6 +9,7 @@ import Contact from "./Screens/Contact";
 import { ping } from "ldrs";
 import { Foot } from "./Components/Footer";
 import { Nav2, NavbarWithMegaMenu } from "./Components/Nav2";
+import PropertyLocation from "./Screens/PropertyLocation";
 
 // Register the loader
 ping.register();
@@ -42,6 +43,7 @@ function App() {
         <Route path="/properties-list/:slug/:slug1" element={<Property />} />
         <Route path="/properties-list/:slug" element={<Property />} />
         <Route path="/property/:slug" element={<PropertyInfo />} />
+        <Route path="/property-location/:slug" element={<PropertyLocation />} />
       </Routes>
       <Foot />
     </div>
