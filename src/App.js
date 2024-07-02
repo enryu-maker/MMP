@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Home from "./Screens/Home";
 import { Nav } from "./Components/Nav";
 import Property from "./Screens/Property";
@@ -8,7 +8,6 @@ import About from "./Screens/About";
 import Contact from "./Screens/Contact";
 import { ping } from "ldrs";
 import { Foot } from "./Components/Footer";
-import { Nav2, NavbarWithMegaMenu } from "./Components/Nav2";
 import PropertyLocation from "./Screens/PropertyLocation";
 
 // Register the loader
@@ -36,7 +35,7 @@ function App() {
   return (
     <div className="font-Poppins">
       <Nav />
-      <Routes>
+      <HashRouter>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact-us" element={<Contact />} />
@@ -44,7 +43,7 @@ function App() {
         <Route path="/properties-list/:slug" element={<Property />} />
         <Route path="/property/:slug" element={<PropertyInfo />} />
         <Route path="/property-location/:slug" element={<PropertyLocation />} />
-      </Routes>
+      </HashRouter>
       <Foot />
     </div>
   );
