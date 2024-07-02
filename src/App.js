@@ -35,7 +35,7 @@ function App() {
   return (
     <div className="font-Poppins">
       <Nav />
-      <HashRouter>
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact-us" element={<Contact />} />
@@ -43,7 +43,7 @@ function App() {
         <Route path="/properties-list/:slug" element={<Property />} />
         <Route path="/property/:slug" element={<PropertyInfo />} />
         <Route path="/property-location/:slug" element={<PropertyLocation />} />
-      </HashRouter>
+      </Routes>
       <Foot />
     </div>
   );
