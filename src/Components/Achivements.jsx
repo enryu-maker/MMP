@@ -74,7 +74,7 @@ export default function Achive() {
                   <img
                     src={icon} // Use src.default to access the image path from require
                     alt={id}
-                    className="object-contain bg-cover bg-gray-50 h-fit lg:h-[100px] w-[80px] lg:w-[100px] "
+                    className="object-contain bg-cover bg-gray-50 h-[100px] lg:h-[100px] w-[200px] lg:w-[200px] "
                   />
                 </div>
               ))}

@@ -36,7 +36,7 @@ export function Nav() {
   };
 
   return (
-    <div key={reloadKey}>
+    <div key={reloadKey} className="sticky top-0 z-30">
       <Navbar
         fluid
         rounded
