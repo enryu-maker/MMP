@@ -64,6 +64,7 @@ export default function Achive() {
           <p className="text-4xl font-semibold text-blue-gray-900 text-center">
             Top developers under one roof
           </p>
+
           <Marquee gradient={false} className="bg-gray-50 overflow-y-hidden">
             <div className="flex flex-wrap w-full justify-evenly items-center mt-8 bg-gray-50">
               {imageEntries.map(([id, icon]) => (
