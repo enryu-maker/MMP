@@ -11,7 +11,6 @@ import { Foot } from "./Components/Footer";
 import PropertyLocation from "./Screens/PropertyLocation";
 import Career from "./Screens/Career";
 
-// Register the loader
 ping.register();
 
 function App() {

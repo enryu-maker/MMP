@@ -20,9 +20,9 @@ function About() {
           </div>
           <div>
             <p className="text-justify text-base md:text-lg">
-            Welcome to MakeMyProperty, your trusted partner in the realm of real estate. At MakeMyProperty, we believe that finding the perfect home is more than a transaction, it's about creating a seamless and memorable experience. Our dedicated team of experts is committed to guiding you through every step of your property journey, making your dreams a reality.{" "}
-            At the core of MakeMyProperty's mission is the unwavering commitment to helping you find not just a house, but a place you can truly call home. We strive to exceed your expectations by delivering personalized service, valuable insights, and a diverse range of property options tailored to your unique preferences and needs.
-            MakeMyProperty is more than a real estate agency; we are a community of passionate professionals united by a common goal – to simplify and enrich the process of buying and selling properties. Our team brings together expertise in real estate, market trends, and client service to provide you with a comprehensive and unparalleled experience.
+            Welcome to MakeMyProperties, your trusted partner in the realm of real estate. At MakeMyProperties, we believe that finding the perfect home is more than a transaction, it's about creating a seamless and memorable experience. Our dedicated team of experts is committed to guiding you through every step of your property journey, making your dreams a reality.{" "}
+            At the core of MakeMyProperties mission is the unwavering commitment to helping you find not just a house, but a place you can truly call home. We strive to exceed your expectations by delivering personalized service, valuable insights, and a diverse range of property options tailored to your unique preferences and needs.
+            MakeMyProperties is more than a real estate agency; we are a community of passionate professionals united by a common goal – to simplify and enrich the process of buying and selling properties. Our team brings together expertise in real estate, market trends, and client service to provide you with a comprehensive and unparalleled experience.
             </p>
           </div>
         </div>
