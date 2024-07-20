@@ -40,17 +40,17 @@ export function Nav() {
       <Navbar
         fluid
         rounded
-        className="shadow-md p-5 text-black top-0 sticky z-50 bg-white"
+        className="shadow-md p-5 text-black fixed top-0 left-0 right-0 z-50 bg-white"
       >
         <div
           className={`flex md:flex-row ${
             isDropdownOpen ? "flex-col" : "flex-col"
-          } justify-between items-center font-Poppins w-full self-center `}
+          } justify-between items-center font-Poppins w-full self-center`}
         >
           <div className="flex flex-row items-end justify-between w-full">
             <Navbar.Brand href="#/" className="flex justify-start">
               <span className="self-center whitespace-nowrap text-lg font-semibold dark:text-white">
-                <img src={logo} className="h-10" />
+                <img src={logo} className="h-10" alt="Logo" />
               </span>
             </Navbar.Brand>
             <motion.div
@@ -81,11 +81,18 @@ export function Nav() {
                       About Us
                     </p>
                   </Navbar.Link>
+                  <Navbar.Link
+                    href="#/career"
+                    className="text-lg text-black text-center md:w-fit w-full items-center align-middle h-full"
+                  >
+                    <p className="text-lg hover:text-green-500 text-black">
+                      Career
+                    </p>
+                  </Navbar.Link>
                   <Dropdown
                     arrowIcon={true}
                     inline={true}
                     className="text-center md:w-fit w-full items-center align-middle h-fit md:h-fit"
-                    // onOpenChange={handleDropdownToggle}
                     label={
                       <p className="text-lg md:py-0 py-2 text-center w-full items-center hover:text-green-500 text-black cursor-pointer">
                         Residential
@@ -124,7 +131,6 @@ export function Nav() {
                     arrowIcon={true}
                     inline={true}
                     className="text-center md:w-fit w-full items-center align-middle h-fit md:h-fit"
-                    // onOpenChange={handleDropdownToggle}
                     label={
                       <p className="text-lg md:py-0 py-2 text-center w-full items-center hover:text-green-500 text-black cursor-pointer">
                         Commercial
@@ -163,7 +169,6 @@ export function Nav() {
                     arrowIcon={true}
                     inline={true}
                     className="text-center md:w-fit w-full items-center align-middle h-fit md:h-fit"
-                    // onOpenChange={handleDropdownToggle}
                     label={
                       <p className="text-lg md:py-0 py-2 text-center w-full items-center hover:text-green-500 text-black cursor-pointer">
                         Na Plots
@@ -213,6 +218,12 @@ export function Nav() {
                     className="text-lg text-black text-start md:w-auto w-screen items-center align-middle h-full"
                   >
                     About Us
+                  </Navbar.Link>
+                  <Navbar.Link
+                    href="#/career"
+                    className="text-lg text-black text-start md:w-auto w-screen items-center align-middle h-full"
+                  >
+                    Career
                   </Navbar.Link>
                   <div className="">
                     <Dropdown
