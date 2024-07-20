@@ -6,4 +6,6 @@ export const IMAGE = {
   5: require("./M-5.png"),
   6: require("./M-6.png"),
   7: require("./M-7.png"),
+  8: require("./M-8.png"),
+  9: require("./M-9.jpeg"),
 };

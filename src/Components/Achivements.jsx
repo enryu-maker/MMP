@@ -24,37 +24,17 @@ export default function Achive() {
   React.useEffect(() => {
     getAchievements();
   }, []);
-  const clients = [
-    {
-      id: 1,
-      icon: IMAGE[1],
-    },
-    {
-      id: 2,
-      icon: IMAGE[2],
-    },
-    {
-      id: 3,
-      icon: IMAGE[3],
-    },
-    {
-      id: 4,
-      icon: IMAGE[4],
-    },
-    {
-      id: 5,
-      icon: IMAGE[5],
-    },
-    {
-      id: 6,
-      icon: IMAGE[6],
-    },
-    {
-      id: 7,
-      icon: IMAGE[7],
-    },
-  ];
+
   const imageEntries = Object.entries(IMAGE);
+
+  const { removeBackground } = require("@imgly/background-removal-node");
+
+  async function removeImageBackground(imgSource) {
+    const blob = await removeBackground(imgSource);
+    const buffer = Buffer.from(await blob.arrayBuffer());
+    const dataURL = `data:image/png;base64,${buffer.toString("base64")}`;
+    return dataURL;
+  }
 
   return (
     <div className="flex flex-col bg-gray-50">
