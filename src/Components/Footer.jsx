@@ -1,5 +1,5 @@
 import { Footer } from "flowbite-react";
-import { BsFacebook, BsInstagram, BsTwitter, BsYoutube } from "react-icons/bs";
+import { BsFacebook, BsInstagram, BsTwitter, BsYoutube, BsLinkedin } from "react-icons/bs";
 import logo from "../images/logo2.png";
 
 export function Foot() {
@@ -91,6 +91,11 @@ export function Foot() {
               href="https://www.youtube.com/@makemyproperty-1234/featured"
               className="text-black hover:text-green-500 transition ease-in-out"
               icon={BsYoutube}
+            />
+            <Footer.Icon
+              href="https://www.linkedin.com/company/make-my-properties/"
+              className="text-black hover:text-green-500 transition ease-in-out"
+              icon={BsLinkedin}
             />
           </div>
         </div>

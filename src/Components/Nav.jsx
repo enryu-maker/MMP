@@ -80,14 +80,14 @@ export function Nav() {
                       About Us
                     </p>
                   </Navbar.Link>
-                  <Navbar.Link
+                  {/* <Navbar.Link
                     href="#/career"
                     className="text-lg text-black text-center md:w-fit w-full items-center align-middle h-full"
                   >
                     <p className="text-lg hover:text-green-500 text-black">
                       Career
                     </p>
-                  </Navbar.Link>
+                  </Navbar.Link> */}
                   <Dropdown
                     arrowIcon={true}
                     inline={true}
@@ -218,12 +218,12 @@ export function Nav() {
                   >
                     About Us
                   </Navbar.Link>
-                  <Navbar.Link
+                  {/* <Navbar.Link
                     href="#/career"
                     className="text-lg text-black text-start md:w-auto w-screen items-center align-middle h-full"
                   >
                     Career
-                  </Navbar.Link>
+                  </Navbar.Link> */}
                   <div className="">
                     <Dropdown
                       arrowIcon={true}
