@@ -1,7 +1,3 @@
-import { Carousel } from "flowbite-react";
-import pic1 from "../images/image-14.webp";
-import pic2 from "../images/image-15.webp";
-import pic3 from "../images/image-16.webp";
 import Marquee from "react-fast-marquee";
 import { IMAGE } from "../images/Images";
 import axios from "axios";

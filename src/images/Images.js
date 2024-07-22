@@ -9,4 +9,5 @@ export const IMAGE = {
   8: require("./M-8.png"),
   9: require("./M-9.jpeg"),
   10: require("./M-10.png"),
+  11: require("./M-11.png"),
 };
