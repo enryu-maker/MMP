@@ -43,14 +43,13 @@ export function Nav() {
         className="shadow-md p-5 text-black fixed top-0 left-0 right-0 z-50 bg-white"
       >
         <div
-          className={`flex md:flex-row ${
-            isDropdownOpen ? "flex-col" : "flex-col"
-          } justify-between items-center font-Poppins w-full self-center`}
+          className={`flex md:flex-row ${isDropdownOpen ? "flex-col" : "flex-col"
+            } justify-between items-center font-Poppins w-full self-center`}
         >
           <div className="flex flex-row items-end justify-between w-full">
             <Navbar.Brand href="#/" className="flex justify-start">
               <span className="self-center whitespace-nowrap text-lg font-semibold dark:text-white">
-                <img src={logo} className="h-10" alt="Logo" />
+                <img src={logo} className="h-12" alt="Logo" />
               </span>
             </Navbar.Brand>
             <motion.div
