@@ -1,5 +1,11 @@
 import { Footer } from "flowbite-react";
-import { BsFacebook, BsInstagram, BsTwitter, BsYoutube, BsLinkedin } from "react-icons/bs";
+import {
+  BsFacebook,
+  BsInstagram,
+  BsTwitter,
+  BsYoutube,
+  BsLinkedin,
+} from "react-icons/bs";
 import logo from "../images/logo2.png";
 
 export function Foot() {
@@ -53,9 +59,12 @@ export function Foot() {
             <div className="max-w-xs">
               <Footer.Title title="Contact" />
               <Footer.LinkGroup col>
-                <Footer.Link href="#" className="hover:text-green-500">
-                  Flat no. 11 Shivangi Appartment Dallubhai Patel colony
-                  Untawadi Nashik 422009
+                <Footer.Link
+                  href="https://maps.app.goo.gl/BLiivArKKRd6d9Qx6"
+                  className="hover:text-green-500"
+                >
+                  Office no.6,1st floor, jagdish sankul, KBT circle, near
+                  wellness medical, Thatte Nagar, Nashik, Maharashtra 422005
                 </Footer.Link>
                 <Footer.Link
                   href="tel:+919029263511"
