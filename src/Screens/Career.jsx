@@ -67,7 +67,7 @@ export default function Career() {
         transition={Flip}
       />
       <div className="h-[200px] w-full bg-green-500 text-white px-10 text-4xl font-black tracking-wide flex items-center">
-        Contact Us
+        Career
       </div>
       <div className="sm:w-[88%] flex justify-evenly my-5 sm:flex-row flex-col items-start">
         <div className="w-full h-full">

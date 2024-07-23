@@ -43,14 +43,13 @@ export function Nav() {
         className="shadow-md p-5 text-black fixed top-0 left-0 right-0 z-50 bg-white"
       >
         <div
-          className={`flex md:flex-row ${
-            isDropdownOpen ? "flex-col" : "flex-col"
-          } justify-between items-center font-Poppins w-full self-center`}
+          className={`flex md:flex-row ${isDropdownOpen ? "flex-col" : "flex-col"
+            } justify-between items-center font-Poppins w-full self-center`}
         >
           <div className="flex flex-row items-end justify-between w-full">
             <Navbar.Brand href="#/" className="flex justify-start">
               <span className="self-center whitespace-nowrap text-lg font-semibold dark:text-white">
-                <img src={logo} className="h-10" alt="Logo" />
+                <img src={logo} className="h-12" alt="Logo" />
               </span>
             </Navbar.Brand>
             <motion.div
@@ -81,14 +80,14 @@ export function Nav() {
                       About Us
                     </p>
                   </Navbar.Link>
-                  <Navbar.Link
+                  {/* <Navbar.Link
                     href="#/career"
                     className="text-lg text-black text-center md:w-fit w-full items-center align-middle h-full"
                   >
                     <p className="text-lg hover:text-green-500 text-black">
                       Career
                     </p>
-                  </Navbar.Link>
+                  </Navbar.Link> */}
                   <Dropdown
                     arrowIcon={true}
                     inline={true}
@@ -219,12 +218,12 @@ export function Nav() {
                   >
                     About Us
                   </Navbar.Link>
-                  <Navbar.Link
+                  {/* <Navbar.Link
                     href="#/career"
                     className="text-lg text-black text-start md:w-auto w-screen items-center align-middle h-full"
                   >
                     Career
-                  </Navbar.Link>
+                  </Navbar.Link> */}
                   <div className="">
                     <Dropdown
                       arrowIcon={true}
