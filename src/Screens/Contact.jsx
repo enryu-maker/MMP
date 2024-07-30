@@ -121,8 +121,8 @@ export default function Contact() {
           </p>
           <h3 className="text-xl font-black">Reach Us</h3>
           <p className=" text-base">
-            Flat no. 11 Shivangi Appartment Dallubhai Patel colony Untawadi
-            Nashik 422009
+            Office no.6, 1st floor, jagdish sankul, KBT circle, near wellness
+            medical, Thatte Nagar, Nashik, Maharashtra 422005
           </p>
           <h3 className="text-xl font-black">Drop a Mail</h3>
           <p className=" text-base">

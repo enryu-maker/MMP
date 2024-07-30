@@ -63,7 +63,7 @@ export function Foot() {
                   href="https://maps.app.goo.gl/BLiivArKKRd6d9Qx6"
                   className="hover:text-green-500"
                 >
-                  Office no.6,1st floor, jagdish sankul, KBT circle, near
+                  Office no.6, 1st floor, jagdish sankul, KBT circle, near
                   wellness medical, Thatte Nagar, Nashik, Maharashtra 422005
                 </Footer.Link>
                 <Footer.Link
